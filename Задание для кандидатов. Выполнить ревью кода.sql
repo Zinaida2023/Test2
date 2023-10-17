@@ -6,7 +6,7 @@ begin
 	declare @RowCount int = (select count(*) from syn.SA_CustomerSeasonal)
 	declare @ErrorMessage varchar(max)
 
--- Проверка на корректность загрузки
+--  на корректность загрузки
 	if not exists (
 	select 1
 	from syn.ImportFile as f
@@ -25,7 +25,7 @@ begin
 		ID int
 	)
 	
-	--Чтение из слоя временных данных
+	--Чтение из слоя временных дан
 	select
 		cc.ID as ID_dbo_Customer
 		,cst.ID as ID_CustomerSystemType
